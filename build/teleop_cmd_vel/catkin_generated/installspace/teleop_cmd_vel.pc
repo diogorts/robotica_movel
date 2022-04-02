@@ -1,0 +1,8 @@
+prefix=/home/diogo/catkin_ws/install
+
+Name: teleop_cmd_vel
+Description: Description of teleop_cmd_vel
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
