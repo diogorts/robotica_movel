@@ -5,6 +5,7 @@
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 subdirs(gtest)
+subdirs(controle_fuzzy)
 subdirs(controle_posicao)
 subdirs(teleop_cmd_vel)
 subdirs(tutorial_ros)

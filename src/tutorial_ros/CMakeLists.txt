@@ -208,3 +208,8 @@ include_directories(
 
 add_executable(1.publicar src/1.publisher.cpp) 
 target_link_libraries(1.publicar ${catkin_LIBRARIES})
+
+add_executable(5.controlX src/5.controlX.cpp)
+target_link_libraries(5.controlX ${catkin_LIBRARIES}) 
+add_executable(5.controlXFuzzy src/5.controlXFuzzy.cpp src/FLIE-master/lingvar.cpp src/FLIE-master/fuzzyset.cpp src/FLIE-master/rule.cpp src/FLIE-master/lingvar.cpp src/FLIE-master/fuzzy_control.cpp)
+target_link_libraries(5.controlXFuzzy ${catkin_LIBRARIES}) 

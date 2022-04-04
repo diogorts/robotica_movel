@@ -100,6 +100,17 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -121,17 +132,6 @@ install/strip: preinstall
 install/strip/fast: install/strip
 
 .PHONY : install/strip/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -180,6 +180,36 @@ tutorial_ros/CMakeFiles/1.publicar.dir/rule:
 	cd /home/diogo/catkin_ws/build && $(MAKE) -f tutorial_ros/CMakeFiles/1.publicar.dir/build.make tutorial_ros/CMakeFiles/1.publicar.dir/build
 .PHONY : 1.publicar/fast
 
+# Convenience name for target.
+tutorial_ros/CMakeFiles/5.controlX.dir/rule:
+	cd /home/diogo/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 tutorial_ros/CMakeFiles/5.controlX.dir/rule
+.PHONY : tutorial_ros/CMakeFiles/5.controlX.dir/rule
+
+# Convenience name for target.
+5.controlX: tutorial_ros/CMakeFiles/5.controlX.dir/rule
+
+.PHONY : 5.controlX
+
+# fast build rule for target.
+5.controlX/fast:
+	cd /home/diogo/catkin_ws/build && $(MAKE) -f tutorial_ros/CMakeFiles/5.controlX.dir/build.make tutorial_ros/CMakeFiles/5.controlX.dir/build
+.PHONY : 5.controlX/fast
+
+# Convenience name for target.
+tutorial_ros/CMakeFiles/5.controlXFuzzy.dir/rule:
+	cd /home/diogo/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 tutorial_ros/CMakeFiles/5.controlXFuzzy.dir/rule
+.PHONY : tutorial_ros/CMakeFiles/5.controlXFuzzy.dir/rule
+
+# Convenience name for target.
+5.controlXFuzzy: tutorial_ros/CMakeFiles/5.controlXFuzzy.dir/rule
+
+.PHONY : 5.controlXFuzzy
+
+# fast build rule for target.
+5.controlXFuzzy/fast:
+	cd /home/diogo/catkin_ws/build && $(MAKE) -f tutorial_ros/CMakeFiles/5.controlXFuzzy.dir/build.make tutorial_ros/CMakeFiles/5.controlXFuzzy.dir/build
+.PHONY : 5.controlXFuzzy/fast
+
 src/1.publisher.o: src/1.publisher.cpp.o
 
 .PHONY : src/1.publisher.o
@@ -207,6 +237,168 @@ src/1.publisher.cpp.s:
 	cd /home/diogo/catkin_ws/build && $(MAKE) -f tutorial_ros/CMakeFiles/1.publicar.dir/build.make tutorial_ros/CMakeFiles/1.publicar.dir/src/1.publisher.cpp.s
 .PHONY : src/1.publisher.cpp.s
 
+src/5.controlX.o: src/5.controlX.cpp.o
+
+.PHONY : src/5.controlX.o
+
+# target to build an object file
+src/5.controlX.cpp.o:
+	cd /home/diogo/catkin_ws/build && $(MAKE) -f tutorial_ros/CMakeFiles/5.controlX.dir/build.make tutorial_ros/CMakeFiles/5.controlX.dir/src/5.controlX.cpp.o
+.PHONY : src/5.controlX.cpp.o
+
+src/5.controlX.i: src/5.controlX.cpp.i
+
+.PHONY : src/5.controlX.i
+
+# target to preprocess a source file
+src/5.controlX.cpp.i:
+	cd /home/diogo/catkin_ws/build && $(MAKE) -f tutorial_ros/CMakeFiles/5.controlX.dir/build.make tutorial_ros/CMakeFiles/5.controlX.dir/src/5.controlX.cpp.i
+.PHONY : src/5.controlX.cpp.i
+
+src/5.controlX.s: src/5.controlX.cpp.s
+
+.PHONY : src/5.controlX.s
+
+# target to generate assembly for a file
+src/5.controlX.cpp.s:
+	cd /home/diogo/catkin_ws/build && $(MAKE) -f tutorial_ros/CMakeFiles/5.controlX.dir/build.make tutorial_ros/CMakeFiles/5.controlX.dir/src/5.controlX.cpp.s
+.PHONY : src/5.controlX.cpp.s
+
+src/5.controlXFuzzy.o: src/5.controlXFuzzy.cpp.o
+
+.PHONY : src/5.controlXFuzzy.o
+
+# target to build an object file
+src/5.controlXFuzzy.cpp.o:
+	cd /home/diogo/catkin_ws/build && $(MAKE) -f tutorial_ros/CMakeFiles/5.controlXFuzzy.dir/build.make tutorial_ros/CMakeFiles/5.controlXFuzzy.dir/src/5.controlXFuzzy.cpp.o
+.PHONY : src/5.controlXFuzzy.cpp.o
+
+src/5.controlXFuzzy.i: src/5.controlXFuzzy.cpp.i
+
+.PHONY : src/5.controlXFuzzy.i
+
+# target to preprocess a source file
+src/5.controlXFuzzy.cpp.i:
+	cd /home/diogo/catkin_ws/build && $(MAKE) -f tutorial_ros/CMakeFiles/5.controlXFuzzy.dir/build.make tutorial_ros/CMakeFiles/5.controlXFuzzy.dir/src/5.controlXFuzzy.cpp.i
+.PHONY : src/5.controlXFuzzy.cpp.i
+
+src/5.controlXFuzzy.s: src/5.controlXFuzzy.cpp.s
+
+.PHONY : src/5.controlXFuzzy.s
+
+# target to generate assembly for a file
+src/5.controlXFuzzy.cpp.s:
+	cd /home/diogo/catkin_ws/build && $(MAKE) -f tutorial_ros/CMakeFiles/5.controlXFuzzy.dir/build.make tutorial_ros/CMakeFiles/5.controlXFuzzy.dir/src/5.controlXFuzzy.cpp.s
+.PHONY : src/5.controlXFuzzy.cpp.s
+
+src/FLIE-master/fuzzy_control.o: src/FLIE-master/fuzzy_control.cpp.o
+
+.PHONY : src/FLIE-master/fuzzy_control.o
+
+# target to build an object file
+src/FLIE-master/fuzzy_control.cpp.o:
+	cd /home/diogo/catkin_ws/build && $(MAKE) -f tutorial_ros/CMakeFiles/5.controlXFuzzy.dir/build.make tutorial_ros/CMakeFiles/5.controlXFuzzy.dir/src/FLIE-master/fuzzy_control.cpp.o
+.PHONY : src/FLIE-master/fuzzy_control.cpp.o
+
+src/FLIE-master/fuzzy_control.i: src/FLIE-master/fuzzy_control.cpp.i
+
+.PHONY : src/FLIE-master/fuzzy_control.i
+
+# target to preprocess a source file
+src/FLIE-master/fuzzy_control.cpp.i:
+	cd /home/diogo/catkin_ws/build && $(MAKE) -f tutorial_ros/CMakeFiles/5.controlXFuzzy.dir/build.make tutorial_ros/CMakeFiles/5.controlXFuzzy.dir/src/FLIE-master/fuzzy_control.cpp.i
+.PHONY : src/FLIE-master/fuzzy_control.cpp.i
+
+src/FLIE-master/fuzzy_control.s: src/FLIE-master/fuzzy_control.cpp.s
+
+.PHONY : src/FLIE-master/fuzzy_control.s
+
+# target to generate assembly for a file
+src/FLIE-master/fuzzy_control.cpp.s:
+	cd /home/diogo/catkin_ws/build && $(MAKE) -f tutorial_ros/CMakeFiles/5.controlXFuzzy.dir/build.make tutorial_ros/CMakeFiles/5.controlXFuzzy.dir/src/FLIE-master/fuzzy_control.cpp.s
+.PHONY : src/FLIE-master/fuzzy_control.cpp.s
+
+src/FLIE-master/fuzzyset.o: src/FLIE-master/fuzzyset.cpp.o
+
+.PHONY : src/FLIE-master/fuzzyset.o
+
+# target to build an object file
+src/FLIE-master/fuzzyset.cpp.o:
+	cd /home/diogo/catkin_ws/build && $(MAKE) -f tutorial_ros/CMakeFiles/5.controlXFuzzy.dir/build.make tutorial_ros/CMakeFiles/5.controlXFuzzy.dir/src/FLIE-master/fuzzyset.cpp.o
+.PHONY : src/FLIE-master/fuzzyset.cpp.o
+
+src/FLIE-master/fuzzyset.i: src/FLIE-master/fuzzyset.cpp.i
+
+.PHONY : src/FLIE-master/fuzzyset.i
+
+# target to preprocess a source file
+src/FLIE-master/fuzzyset.cpp.i:
+	cd /home/diogo/catkin_ws/build && $(MAKE) -f tutorial_ros/CMakeFiles/5.controlXFuzzy.dir/build.make tutorial_ros/CMakeFiles/5.controlXFuzzy.dir/src/FLIE-master/fuzzyset.cpp.i
+.PHONY : src/FLIE-master/fuzzyset.cpp.i
+
+src/FLIE-master/fuzzyset.s: src/FLIE-master/fuzzyset.cpp.s
+
+.PHONY : src/FLIE-master/fuzzyset.s
+
+# target to generate assembly for a file
+src/FLIE-master/fuzzyset.cpp.s:
+	cd /home/diogo/catkin_ws/build && $(MAKE) -f tutorial_ros/CMakeFiles/5.controlXFuzzy.dir/build.make tutorial_ros/CMakeFiles/5.controlXFuzzy.dir/src/FLIE-master/fuzzyset.cpp.s
+.PHONY : src/FLIE-master/fuzzyset.cpp.s
+
+src/FLIE-master/lingvar.o: src/FLIE-master/lingvar.cpp.o
+
+.PHONY : src/FLIE-master/lingvar.o
+
+# target to build an object file
+src/FLIE-master/lingvar.cpp.o:
+	cd /home/diogo/catkin_ws/build && $(MAKE) -f tutorial_ros/CMakeFiles/5.controlXFuzzy.dir/build.make tutorial_ros/CMakeFiles/5.controlXFuzzy.dir/src/FLIE-master/lingvar.cpp.o
+.PHONY : src/FLIE-master/lingvar.cpp.o
+
+src/FLIE-master/lingvar.i: src/FLIE-master/lingvar.cpp.i
+
+.PHONY : src/FLIE-master/lingvar.i
+
+# target to preprocess a source file
+src/FLIE-master/lingvar.cpp.i:
+	cd /home/diogo/catkin_ws/build && $(MAKE) -f tutorial_ros/CMakeFiles/5.controlXFuzzy.dir/build.make tutorial_ros/CMakeFiles/5.controlXFuzzy.dir/src/FLIE-master/lingvar.cpp.i
+.PHONY : src/FLIE-master/lingvar.cpp.i
+
+src/FLIE-master/lingvar.s: src/FLIE-master/lingvar.cpp.s
+
+.PHONY : src/FLIE-master/lingvar.s
+
+# target to generate assembly for a file
+src/FLIE-master/lingvar.cpp.s:
+	cd /home/diogo/catkin_ws/build && $(MAKE) -f tutorial_ros/CMakeFiles/5.controlXFuzzy.dir/build.make tutorial_ros/CMakeFiles/5.controlXFuzzy.dir/src/FLIE-master/lingvar.cpp.s
+.PHONY : src/FLIE-master/lingvar.cpp.s
+
+src/FLIE-master/rule.o: src/FLIE-master/rule.cpp.o
+
+.PHONY : src/FLIE-master/rule.o
+
+# target to build an object file
+src/FLIE-master/rule.cpp.o:
+	cd /home/diogo/catkin_ws/build && $(MAKE) -f tutorial_ros/CMakeFiles/5.controlXFuzzy.dir/build.make tutorial_ros/CMakeFiles/5.controlXFuzzy.dir/src/FLIE-master/rule.cpp.o
+.PHONY : src/FLIE-master/rule.cpp.o
+
+src/FLIE-master/rule.i: src/FLIE-master/rule.cpp.i
+
+.PHONY : src/FLIE-master/rule.i
+
+# target to preprocess a source file
+src/FLIE-master/rule.cpp.i:
+	cd /home/diogo/catkin_ws/build && $(MAKE) -f tutorial_ros/CMakeFiles/5.controlXFuzzy.dir/build.make tutorial_ros/CMakeFiles/5.controlXFuzzy.dir/src/FLIE-master/rule.cpp.i
+.PHONY : src/FLIE-master/rule.cpp.i
+
+src/FLIE-master/rule.s: src/FLIE-master/rule.cpp.s
+
+.PHONY : src/FLIE-master/rule.s
+
+# target to generate assembly for a file
+src/FLIE-master/rule.cpp.s:
+	cd /home/diogo/catkin_ws/build && $(MAKE) -f tutorial_ros/CMakeFiles/5.controlXFuzzy.dir/build.make tutorial_ros/CMakeFiles/5.controlXFuzzy.dir/src/FLIE-master/rule.cpp.s
+.PHONY : src/FLIE-master/rule.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -217,13 +409,33 @@ help:
 	@echo "... install"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... test"
 	@echo "... 1.publicar"
+	@echo "... 5.controlX"
 	@echo "... install/local"
 	@echo "... install/strip"
-	@echo "... test"
+	@echo "... 5.controlXFuzzy"
 	@echo "... src/1.publisher.o"
 	@echo "... src/1.publisher.i"
 	@echo "... src/1.publisher.s"
+	@echo "... src/5.controlX.o"
+	@echo "... src/5.controlX.i"
+	@echo "... src/5.controlX.s"
+	@echo "... src/5.controlXFuzzy.o"
+	@echo "... src/5.controlXFuzzy.i"
+	@echo "... src/5.controlXFuzzy.s"
+	@echo "... src/FLIE-master/fuzzy_control.o"
+	@echo "... src/FLIE-master/fuzzy_control.i"
+	@echo "... src/FLIE-master/fuzzy_control.s"
+	@echo "... src/FLIE-master/fuzzyset.o"
+	@echo "... src/FLIE-master/fuzzyset.i"
+	@echo "... src/FLIE-master/fuzzyset.s"
+	@echo "... src/FLIE-master/lingvar.o"
+	@echo "... src/FLIE-master/lingvar.i"
+	@echo "... src/FLIE-master/lingvar.s"
+	@echo "... src/FLIE-master/rule.o"
+	@echo "... src/FLIE-master/rule.i"
+	@echo "... src/FLIE-master/rule.s"
 .PHONY : help
 
 

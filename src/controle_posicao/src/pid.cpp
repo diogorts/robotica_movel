@@ -1,4 +1,4 @@
-#include "ros/ros.h"
+    #include "ros/ros.h"
     #include "std_msgs/String.h"
     #include "geometry_msgs/Twist.h"
     #include "turtlesim/Pose.h"
@@ -27,7 +27,7 @@
       system("rosservice call reset");
       ros::Rate loop_rate(10);
      
-      while (ros::ok())
+      if (ros::ok())
       {
         geometry_msgs::Twist msg;
         float posdesejada[2], oridesejada, dist=99, erroorie=99;

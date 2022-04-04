@@ -1,0 +1,8 @@
+prefix=/home/diogo/catkin_ws/devel
+
+Name: controle_fuzzy
+Description: Description of controle_fuzzy
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

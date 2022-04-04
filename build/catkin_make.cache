@@ -1,2 +1,2 @@
-controle_posicao:teleop_cmd_vel:tutorial_ros
+controle_fuzzy:controle_posicao:teleop_cmd_vel:tutorial_ros
 -DCATKIN_DEVEL_PREFIX=/home/diogo/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/diogo/catkin_ws/install -G Unix Makefiles
